@@ -11,7 +11,6 @@ for i in range(len(groups)):
     groups[i] = groups[i].split('\n')[1:]
     for j in range(len(groups[i])):
         groups[i][j] = [int(k) for k in groups[i][j].split()]
-        # print(groups[i][j])
         split_points[i].append(groups[i][j][1])
         split_points[i].append(groups[i][j][1] + groups[i][j][2])
 
@@ -32,9 +31,6 @@ for i in range(len(groups)):
                 intervals[-1][ind][0] += groups[i][j][0] - groups[i][j][1]
                 intervals[-1][ind][1] += groups[i][j][0] - groups[i][j][1]
                 break
-
-    # print(split_points[-1])
-    # print(intervals[-1])
 
 ans = intervals[-1][0][0]
 for i in intervals[-1]:
