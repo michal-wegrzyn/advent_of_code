@@ -1,0 +1,2 @@
+pairs = [[int(value) for value in line.split()] for line in open('input').readlines()]
+print(sum(abs(pair[0] - pair[1]) for pair in zip(sorted(pair[0] for pair in pairs), sorted(pair[1] for pair in pairs))))
