@@ -1,0 +1,2 @@
+number_lists = [[int(value) for value in line.split()] for line in open('input').readlines()]
+print(sum(all(abs(i-j)<=3 for i, j in zip(numbers, numbers[1:])) for numbers in number_lists if all((numbers[0]-numbers[1])*(i-j)>0 for i, j in zip(numbers, numbers[1:]))))
